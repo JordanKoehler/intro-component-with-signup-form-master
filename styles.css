@@ -1,0 +1,50 @@
+body {
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+
+  font-weight: 700;
+  font-size: 700;
+  color: #fff;
+  padding-bottom: 3%;
+}
+
+p {
+  color: #fff;
+}
+
+.intro {
+  text-align:left;
+  padding: 15% 7%;
+}
+
+.btn {
+  text-align: center;
+}
+
+.tryIt-btn {
+  background-color: hsl(248, 32%, 49%) ;
+}
+
+.tryIt-btn:hover {
+  background-color: hsl(249, 10%, 26%);
+}
+.trial-btn {
+  background-color: hsl(154, 59%, 51%);
+}
+
+.trial-btn:hover {
+  background-color: hsl(246, 25%, 77%);
+}
+
+.form-control {
+  padding: 1.5rem;
+  margin-bottom: 5%;
+}
+
+.card {
+  padding: 5%;
+}
