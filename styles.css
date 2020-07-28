@@ -21,12 +21,18 @@ p {
   padding: 15% 7%;
 }
 
+.form {
+  padding: 3%;
+}
+
 .btn {
   text-align: center;
 }
 
 .tryIt-btn {
   background-color: hsl(248, 32%, 49%) ;
+  padding: 1.5% 4%;
+  margin: 3% 0;
 }
 
 .tryIt-btn:hover {
@@ -34,6 +40,8 @@ p {
 }
 .trial-btn {
   background-color: hsl(154, 59%, 51%);
+  padding-left: 112px;
+  padding-right: 112px;
 }
 
 .trial-btn:hover {
