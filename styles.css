@@ -66,3 +66,22 @@ p {
 .termsAndServices{
   color: hsl(0, 100%, 74%);
 }
+
+@media (max-width: 375px) {
+  body {
+    text-align:center;
+  }
+  h1 {
+    text-align:center;
+  }
+  p{
+    text-align:center;
+  }
+  .form-control{
+    text-align:center;
+  }
+  .card {
+    text-align:center;
+    padding: auto;
+  }
+}
