@@ -30,6 +30,7 @@ p {
 }
 
 .tryIt-btn {
+  font-weight: 400;
   background-color: hsl(248, 32%, 49%) ;
   padding: 1.5% 4%;
   margin: 3% 0;
@@ -40,8 +41,7 @@ p {
 }
 .trial-btn {
   background-color: hsl(154, 59%, 51%);
-  padding-left: 112px;
-  padding-right: 112px;
+
 }
 
 .trial-btn:hover {
@@ -55,4 +55,8 @@ p {
 
 .card {
   padding: 5%;
+}
+
+.termsText {
+  color: hsl(246, 25%, 77%);
 }
