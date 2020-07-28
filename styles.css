@@ -30,10 +30,11 @@ p {
 }
 
 .tryIt-btn {
+  box-shadow: 0 4px 2px #959595;
   font-size: 0.8rem;
   font-weight: 400;
   background-color: hsl(248, 32%, 49%) ;
-  margin: 3% 0;
+  margin: 5% 0;
 }
 
 .tryIt-btn:hover {
@@ -43,6 +44,7 @@ p {
   background-color: hsl(154, 59%, 51%);
   font-size: 1rem;
   font-weight: 500;
+  box-shadow: 0 4px 2px #BCBCBC;
 }
 
 .trial-btn:hover {
@@ -67,21 +69,20 @@ p {
   color: hsl(0, 100%, 74%);
 }
 
-@media (max-width: 375px) {
-  body {
+@media (max-width: 500px){
+  .intro {
     text-align:center;
   }
-  h1 {
+  .form {
     text-align:center;
+    margin: 5%;
   }
-  p{
-    text-align:center;
+  .form-group {
+    margin: 4%;
   }
-  .form-control{
-    text-align:center;
-  }
-  .card {
-    text-align:center;
-    padding: auto;
+  .tryIt-btn {
+    padding: 5%;
+    margin: 4%;
+    width: 26rem;
   }
 }
