@@ -69,7 +69,7 @@ p {
   color: hsl(0, 100%, 74%);
 }
 
-@media (max-width: 375px){
+@media only screen and (max-width: 600px){
   .intro {
     text-align:center;
   }
