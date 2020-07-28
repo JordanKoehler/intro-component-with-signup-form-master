@@ -58,4 +58,9 @@ p {
 
 .termsText {
   color: hsl(246, 25%, 77%);
+  font-size: 12px;
+}
+
+.termsAndServices{
+  color: hsl(0, 100%, 74%);
 }
