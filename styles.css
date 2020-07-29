@@ -2,18 +2,17 @@ body {
   background-image: url("images/bg-intro-desktop.png");
   background-color: hsl(0, 100%, 74%);
   font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
 h1 {
-
   font-weight: 700;
-  font-size: 700;
-  color: #fff;
   padding-bottom: 3%;
 }
 
-p {
-  color: #fff;
+footer {
+  text-align:center;
+  font-weight:400;
 }
 
 .intro {
@@ -23,16 +22,17 @@ p {
 
 .form {
   padding: 3%;
+  text-align:center;
+
 }
 
 .btn {
-  text-align: center;
+  color:white;
+  box-shadow: 0 4px 2px #959595;
 }
 
 .tryIt-btn {
-  box-shadow: 0 4px 2px #959595;
   font-size: 0.8rem;
-  font-weight: 400;
   background-color: hsl(248, 32%, 49%) ;
   margin: 5% 0;
 }
@@ -40,11 +40,11 @@ p {
 .tryIt-btn:hover {
   background-color: hsl(249, 10%, 26%);
 }
+
 .trial-btn {
   background-color: hsl(154, 59%, 51%);
   font-size: 1rem;
   font-weight: 500;
-  box-shadow: 0 4px 2px #BCBCBC;
 }
 
 .trial-btn:hover {
