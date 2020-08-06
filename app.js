@@ -1,20 +1,74 @@
-function validate() {
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
+const mongoose = require("mongoose");
 
-  if (document.logInForm.fname.value == "") {
-    alert("First name cannot be empty.");
-    document.getElementsByTagName("fname").style.color = "red";
-    return false;
-  }
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
-  if (document.logInForm.lname.value == "") {
-    alert("Last name cannot be empty.");
-    document.logInForm.lname.focus();
-    return false;
-  }
-  if (document.logInForm.password.value == "") {
-    alert("Password cannot be empty");
-    document.logInForm.password.focus();
-    return false;
-  }
-  return true;
-}
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
+
+// Connection URL
+const url = 'mongodb://localhost:27017/trialSignUpDB';
+MongoClient.connect("mongodb://localhost:27017/trialSignUpDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+
+// Database Name
+const dbName = 'trialSignUpDB';
+
+// Create a new MongoClient
+const client = new MongoClient(url);
+
+// Use connect method to connect to the Server
+client.connect(function(err) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+  const db = client.db(dbName);
+  client.close();
+});
+
+const signUpSchema = {
+  fName: String,
+  lName: String,
+  email: String,
+  password: String
+};
+
+const SignUp = mongoose.model("SignUp", signUpSchema);
+
+app.set('view engine', 'ejs');
+
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.get("/success", function(req,res){
+  res.sendFile(__dirname + "/success.html");
+});
+
+app.post("/", function(req, res) {
+  const signUpForm = new SignUp({
+    fName: req.body.fName,
+    lName: req.body.lName,
+    email: req.body.email,
+    password: req.body.password
+  });
+
+  signUpForm.save(function(err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Database saved");
+    }
+  });
+});
+
+
+app.listen(3000, function() {
+  console.log("Server is running on 3000");
+});
