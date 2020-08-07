@@ -52,6 +52,7 @@ app.get("/success", function(req,res){
 });
 
 app.post("/success", function(req, res) {
+
   const signUpForm = new SignUp({
     fName: req.body.fName,
     lName: req.body.lName,
