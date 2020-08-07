@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Mizukitt99/intro-component-with-signup-form-master#readme",
   "dependencies": {
+    "assert": "^2.0.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.27"

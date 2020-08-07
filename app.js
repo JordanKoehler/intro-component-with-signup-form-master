@@ -13,10 +13,10 @@ const assert = require('assert');
 
 // Connection URL
 const url = 'mongodb://localhost:27017/trialSignUpDB';
-MongoClient.connect("mongodb://localhost:27017/trialSignUpDB", {
+mongoose.connect("mongodb://localhost/trialSignUpDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
-})
+});
 
 // Database Name
 const dbName = 'trialSignUpDB';
@@ -51,7 +51,7 @@ app.get("/success", function(req,res){
   res.sendFile(__dirname + "/success.html");
 });
 
-app.post("/", function(req, res) {
+app.post("/success", function(req, res) {
   const signUpForm = new SignUp({
     fName: req.body.fName,
     lName: req.body.lName,
@@ -64,6 +64,7 @@ app.post("/", function(req, res) {
       console.log(err);
     } else {
       console.log("Database saved");
+      res.redirect("/success");
     }
   });
 });
